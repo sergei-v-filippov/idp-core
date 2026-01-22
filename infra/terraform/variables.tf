@@ -8,7 +8,8 @@ variable "region" {
   default     = "us-central1"
 }
 
-variable "cluster_name" {
-  description = "GKE Cluster Name"
-  default     = "idp-cluster-prod"
+variable "env_name" {
+  description = "Environment name (e.g. prod, staging)"
+  type        = string
+  default     = "idp-prod"
 }
