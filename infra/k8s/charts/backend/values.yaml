@@ -11,5 +11,5 @@ service:
   targetPort: 3000
 
 # Environment variables for the application
-env:
-  DATABASE_URL: "postgres://user:pass@localhost:5432/db" # Placeholder
+# env:
+#   DATABASE_URL: "postgres://user:pass@localhost:5432/db" # Placeholder
