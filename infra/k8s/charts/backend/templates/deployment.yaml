@@ -19,6 +19,8 @@ spec:
         ports:
         - containerPort: {{ .Values.service.targetPort }}
         env:
-        # Inject environment variables
         - name: DATABASE_URL
-          value: {{ .Values.env.DATABASE_URL | quote }}
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Release.Name }}-db-app
+              key: uri
