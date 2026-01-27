@@ -21,7 +21,9 @@ jobs:
         with:
           context: ./backend
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/idp-core-backend:latest
+          tags: |
+            ${{ secrets.DOCKER_USERNAME }}/idp-core-backend:latest
+            ${{ secrets.DOCKER_USERNAME }}/idp-core-backend:${{ github.sha }}
 
   build-frontend:
     runs-on: ubuntu-latest
@@ -36,4 +38,6 @@ jobs:
         with:
           context: ./frontend
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/idp-core-frontend:v1-fix
+          tags: |
+            ${{ secrets.DOCKER_USERNAME }}/idp-core-frontend:latest
+            ${{ secrets.DOCKER_USERNAME }}/idp-core-frontend:${{ github.sha }}
