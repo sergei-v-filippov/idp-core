@@ -7,7 +7,8 @@ spec:
   
   storage:
     type: ephemeral
-    storageClass: ""
+    size: 1Gi 
+    # storageClass: ""
   
   bootstrap:
     initdb:
