@@ -8,6 +8,17 @@ resource "google_container_cluster" "primary" {
   network    = google_compute_network.vpc.id
   subnetwork = google_compute_subnetwork.private.id
 
+  # Enable Network Policy (Calico)
+  network_policy {
+    enabled = true
+  }
+  
+  addons_config {
+    network_policy_config {
+      disabled = false
+    }
+  }
+
   # Enable VPC-native traffic
   ip_allocation_policy {
     cluster_secondary_range_name  = "k8s-pod-range"

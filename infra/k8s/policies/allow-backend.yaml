@@ -1,0 +1,38 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-backend-traffic
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      app: backend # Applies to Backend pods
+  policyTypes:
+  - Ingress
+  - Egress
+  
+  # Ingress: Allow traffic from Nginx Ingress Controller
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          kubernetes.io/metadata.name: ingress-nginx
+      podSelector:
+        matchLabels:
+          app.kubernetes.io/name: ingress-nginx
+    ports:
+    - protocol: TCP
+      port: 3000
+
+  # Egress: Allow traffic to PostgreSQL
+  egress:
+  - to:
+    - podSelector:
+        matchLabels:
+          cnpg.io/cluster: idp-backend-db # CNPG Label
+    ports:
+    - protocol: TCP
+      port: 5432
+  # Egress: Allow traffic to Google APIs (for IAM authentication, etc.) if needed
+  # - to: 
+  #     - ipBlock: { cidr: 0.0.0.0/0 } # (Narrow this down in prod)
