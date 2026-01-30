@@ -8,7 +8,7 @@ terraform {
   }
 
   backend "gcs" {
-    bucket  = "tf-state-idp-core-svf"
+    bucket = "tf-state-idp-core-svf" # Note: Update this to your own GCS bucket
     prefix  = "terraform/state"
   }
 }

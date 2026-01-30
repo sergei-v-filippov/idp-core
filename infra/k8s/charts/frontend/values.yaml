@@ -1,9 +1,9 @@
 # Frontend Configuration
 
 image:
-  repository: sergeivf/idp-core-frontend
-  tag: v7-fix
-  pullPolicy: Always
+  repository: sergeivf/idp-core-frontend # Public demo image. Replace with your private registry for prod.
+  tag: "latest" # This will be overwritten by CI
+  pullPolicy: IfNotPresent
 
 service:
   type: ClusterIP

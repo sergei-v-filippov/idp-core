@@ -2,8 +2,8 @@
 
 image:
   repository: sergeivf/idp-core-backend
-  tag: latest
-  pullPolicy: Always
+  tag: "latest" # This will be overwritten by CI
+  pullPolicy: IfNotPresent
 
 service:
   type: ClusterIP

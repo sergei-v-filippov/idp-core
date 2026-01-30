@@ -13,3 +13,15 @@ variable "env_name" {
   type        = string
   default     = "idp-prod"
 }
+
+variable "domain_name" {
+  description = "The base domain for the IDP platform"
+  type        = string
+  default     = "idp.filippov.world" 
+}
+
+variable "gcs_bucket_name" {
+  description = "The base domain for the IDP platform"
+  type        = string
+  default     = "tf-state-idp-core-svf"
+}
