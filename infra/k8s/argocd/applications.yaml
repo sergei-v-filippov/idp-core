@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/sergei-v-filippov/idp-core.git # ТВОЙ РЕПО
+    repoURL: https://github.com/sergei-v-filippov/idp-core.git 
     targetRevision: main
     path: infra/k8s/charts/backend
   destination:

@@ -33,6 +33,3 @@ spec:
     ports:
     - protocol: TCP
       port: 5432
-  # Egress: Allow traffic to Google APIs (for IAM authentication, etc.) if needed
-  # - to: 
-  #     - ipBlock: { cidr: 0.0.0.0/0 } # (Narrow this down in prod)

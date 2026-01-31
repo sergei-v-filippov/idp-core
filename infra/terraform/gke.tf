@@ -1,7 +1,7 @@
 resource "google_container_cluster" "primary" {
   name     = "${var.env_name}-cluster"
   location = "${var.region}-a" # Zonal (Cheaper)
-  
+
   remove_default_node_pool = true
   initial_node_count       = 1
 
@@ -12,7 +12,7 @@ resource "google_container_cluster" "primary" {
   network_policy {
     enabled = true
   }
-  
+
   addons_config {
     network_policy_config {
       disabled = false

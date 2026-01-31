@@ -3,7 +3,7 @@ kind: ServiceMonitor
 metadata:
   name: {{ .Release.Name }}-monitor
   labels:
-    # This label is required for Prometheus Operator to discover this monitor
+    # Critical: Matches the 'serviceMonitorSelector' in Prometheus Operator
     release: kube-prometheus-stack
 spec:
   selector:

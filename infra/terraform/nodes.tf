@@ -11,12 +11,12 @@ resource "google_container_node_pool" "primary_nodes" {
   node_count = 1
 
   node_config {
-    preemptible  = true # Spot Instances
+    preemptible  = true            # Spot Instances
     machine_type = "e2-standard-2" # 2 CPU, 8GB RAM (Optimized for IDP stack)
 
     service_account = google_service_account.kubernetes.email
     oauth_scopes    = ["https://www.googleapis.com/auth/cloud-platform"]
-    
+
     tags = ["k8s-node"]
   }
 }

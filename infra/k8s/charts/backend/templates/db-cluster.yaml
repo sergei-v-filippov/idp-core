@@ -6,10 +6,8 @@ spec:
   instances: 1 
   
   storage:
-    # type: ephemeral
     size: 1Gi 
     storageClass: "standard"
-    # storageClass: ""
   
   bootstrap:
     initdb:

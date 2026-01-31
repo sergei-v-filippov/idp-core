@@ -4,14 +4,13 @@ metadata:
   name: letsencrypt-prod
 spec:
   acme:
-    # URL сервера Let's Encrypt
+    # Let's Encrypt server URL 
     server: https://acme-v02.api.letsencrypt.org/directory
-    # Твой email для уведомлений (замени на свой!)
     email: sergei.v.filippov@gmail.com
-    # Секрет, где будет храниться приватный ключ аккаунта
+    # Secret where the account's private key will be stored
     privateKeySecretRef:
       name: letsencrypt-prod
-    # Способ подтверждения владения доменом (HTTP-01)
+    # Method of confirming domain ownership (HTTP-01)
     solvers:
     - http01:
         ingress:

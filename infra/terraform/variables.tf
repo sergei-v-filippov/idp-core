@@ -17,7 +17,7 @@ variable "env_name" {
 variable "domain_name" {
   description = "The base domain for the IDP platform"
   type        = string
-  default     = "idp.filippov.world" 
+  default     = "idp.filippov.world"
 }
 
 variable "gcs_bucket_name" {
