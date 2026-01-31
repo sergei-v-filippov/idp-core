@@ -1,5 +1,14 @@
+# Terraform
 *.tfvars 
 **/.terraform/*
 *.tfstate
 *.tfstate.backup
 .env
+
+# Node
+node_modules/
+dist/
+.env
+
+# OS
+.DS_Store
