@@ -15,6 +15,22 @@ This repository serves as a **sanitized technical demonstration** ("Walking Skel
 
 ---
 
+## 📸 Platform Preview
+
+### 1. Developer Portal (React Frontend)
+The frontend communicates with the backend API via secure Ingress.
+![Frontend UI](docs/img/frontend-dashboard.png)
+
+### 2. Observability (Grafana)
+Real-time application metrics (RPS, Latency) automatically scraped by Prometheus.
+![Grafana Metrics](docs/img/grafana-metrics.png)
+
+### 3. GitOps Delivery (ArgoCD)
+Zero-touch deployment: ArgoCD automatically syncs cluster state with the Git repository.
+![ArgoCD Status](docs/img/argocd.png)
+
+---
+
 ## 🏗 Architecture
 
 The platform is built on **Google Cloud Platform (GKE)**, utilizing a **BFF (Backend for Frontend)** pattern to decouple the UI from core infrastructure services.
