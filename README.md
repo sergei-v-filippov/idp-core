@@ -5,7 +5,7 @@
 ![Kubernetes](https://img.shields.io/badge/Orchestration-GKE-blue)
 ![React](https://img.shields.io/badge/Frontend-React%20%7C%20Vite-61DAFB)
 
-## 📋 Overview
+## Overview
 
 **IDP Core** is a reference architecture for a modern **Internal Developer Platform**, designed to reduce cognitive load for engineering teams and accelerate Time-to-Market.
 
@@ -15,7 +15,7 @@ This repository serves as a **sanitized technical demonstration** ("Walking Skel
 
 ---
 
-## 📸 Platform Preview
+## Platform Preview
 
 ### 1. Developer Portal (React Frontend)
 The frontend communicates with the backend API via secure Ingress.
@@ -31,7 +31,7 @@ Zero-touch deployment: ArgoCD automatically syncs cluster state with the Git rep
 
 ---
 
-## 🏗 Architecture
+## Architecture
 
 The platform is built on **Google Cloud Platform (GKE)**, utilizing a **BFF (Backend for Frontend)** pattern to decouple the UI from core infrastructure services.
 
@@ -60,7 +60,7 @@ graph TD
 ```
 ---
 
-## 🚀 CI/CD & GitOps Flow
+## CI/CD & GitOps Flow
 The delivery pipeline is fully automated using GitHub Actions for CI and ArgoCD for CD (GitOps), ensuring zero-downtime deployments.
 
 ```mermaid
@@ -90,7 +90,7 @@ sequenceDiagram
 ```
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 ### Platform & Infrastructure
 *   **Cloud:** Google Cloud Platform (GCP)
@@ -108,7 +108,7 @@ sequenceDiagram
 *   **Logs:** Promtail + Loki.
 *   **Visualization:** Grafana (Infrastructure & Business KPIs).
 
-## 🚦 Getting Started (Local Dev)
+## Getting Started (Local Dev)
 
 To spin up the local development environment using Docker Compose:
 
@@ -142,7 +142,7 @@ terraform plan
 
 ---
 
-## ⚠️ Architecture Notes (Demo vs Production)
+## Architecture Notes (Demo vs Production)
 
 To ensure this repository remains portable and cost-effective for demonstration purposes, certain enterprise components were abstracted:
 
@@ -151,7 +151,7 @@ To ensure this repository remains portable and cost-effective for demonstration 
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Sergei Filippov**  
 Senior Platform Engineer | DevOps | Fullstack Infrastructure  
